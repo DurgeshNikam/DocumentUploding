@@ -1,0 +1,31 @@
+#Spring application configuration..
+server:
+  port: 9093
+  
+spring :
+ application:
+    name: Document-Uploading
+#DataBase Connection Properties.
+ datasource:
+   driver-class-name: com.mysql.cj.jdbc.Driver
+   url : jdbc:mysql://localhost:3306/documentuploading
+   username: root
+   password: root
+  
+ #Hibernate Properties
+ jpa:
+   hibernate:
+     ddl-auto: create 
+     show-sql: true 
+#Multipart Propeties
+#Enable multipar uploads
+
+ servlet:
+   multipart:
+     enabled: true
+     file-size-threshold: 100KB
+     max-file-size: 250MB
+     max-request-size: 500MB
+        
+        
+         
